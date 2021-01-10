@@ -4,23 +4,24 @@ import * as BooksAPI from './BooksAPI';
 
 class ListBooksManualwantToRead extends React.Component {
 
+  state = {
+    options:[
+      'currentlyReading',
+      'wantToRead',
+      'read'
+     ]
+  }
 
   handleChange = (e, book)  => {
-    const shelf = e.target.value
-   console.log(book,shelf)
- BooksAPI.update(book,shelf)  
+     const shelf = e.target.value
+     console.log(book,shelf)
+     BooksAPI.update(book,shelf)  
 }
 
 
   render(){
 
-    this.state = {
-      options:[
-        'currentlyReading',
-        'wantToRead',
-        'read'
-       ]
-    }
+    
     //console.log('prop', this.props)
     return(
             <div className="bookshelf">

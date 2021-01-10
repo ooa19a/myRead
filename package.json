@@ -6,7 +6,7 @@
     "form-serialize": "^0.7.2",
     "multiselect-react-dropdown": "^1.6.3",
     "prop-types": "^15.6.2",
-    "react": "^16.6.3",
+    "react": "^16.14.0",
     "react-dom": "^16.6.3",
     "react-multi-select-component": "^3.0.8",
     "react-router-dom": "^5.2.0",

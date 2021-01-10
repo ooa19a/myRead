@@ -1,34 +1,14 @@
 import React from 'react';
-//import {Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import * as BooksAPI from './BooksAPI';
+
 
 class ListBooksManualCurrentlyReading extends React.Component {
 
-  
-  
-// newComponentDidMountPromise = () => {
-//   return new Promise ((resolve, reject) => {
-//     function componentDidMount(){
-//       BooksAPI.getAll().then((books) => {
-//         //console.log(books)
-//         this.setState(() => ({books}))
-//       })
-//     }
-//   }) 
-// }
-
-// componentDidMount(){
-//   BooksAPI.getAll().then((books) => {
-//     //console.log(books)
-//     this.setState(() => ({books}))
-//   })
-// }
-
-
 handleChange = (e, book)  => {
-  const shelf = e.target.value
-  console.log(book,shelf)
-  BooksAPI.update(book,shelf)  
+   const shelf = e.target.value
+   console.log(book,shelf)
+   BooksAPI.update(book,shelf);
 }
 
 
@@ -37,37 +17,72 @@ state = {
     'currentlyReading',
     'wantToRead',
     'read'
-  ]
+  ],
+    dead:[
+      'readdddd',
+      'diclined',
+      'objectionMy lORD'
+    ]
+}
+
+updatestate = (e) => {
+  console.log(e.target.value)
+  this.setState({
+    options: [e.target.value]
+    
+  })
 }
 
 //funtion to update the state of the options[]. The goal is to make the page re-render
-updatestateofbook = (e) => {
-  console.log(e.target.value)
-  //const value = e.target.value;
-  this.setState((prevstate) => ({
-     options: prevstate.options
-  }))
-}
+// updatestateofbook = (e) => {
+//   console.log(e.target.value)
+//   //const value = e.target.value;
+
+//   if(this.props.onAddToBookShelf) {
+//     this.props.onAddToBookShelf()
+//     console.log(this.props.onAddToBookShelf())
+//   }
+//   this.setState((prevstate) => ({
+//      options: [prevstate.options]
+//   }))
+// }
+
+
 
 //combine the two above funtions. The goal is to pass this funtion to onChange 
-combinefun = (e,book) => {
+combinefun = async (e,book) => {
+  const shelf = e.target.value
   this.handleChange(e,book)
-  this.updatestateofbook(e)
+ // this.props.move(shelf,book)
+  BooksAPI.update(book,shelf);
 }
 
-render(){   
 
-    //console.log('prop', this.props)
+
+
+
+
+
+render(){   
+     console.log('prop', this.props)
 
 //desturturing 
-    const {books} =this.props
-    const {options} = this.state
+    const {books, move, updateBookStatus} =this.props
+    //const {options} = this.state
+    //const {bookshelfDisplay} = this.props
+    //const {bookshelf} = this.props
+    //const {move} = this.props
+
+    
 
     return(
+      
         <div className="list-books">
           <div className="list-books-title">
             <h1>MyReads</h1>
           </div>
+
+          <button onClick ={this.move}>See book shelf on Currently Reading page</button>
 
               <div className="bookshelf">
                   <h2 className="bookshelf-title">Currently Reading</h2>
@@ -77,7 +92,7 @@ render(){
                       {books.filter((book) => 
                       book.shelf === 'currentlyReading'
                       ).map((book)=> ( 
-                          <li key ={book.title}>
+                          <li key ={book.id}>
                             <div className="book">
                               <div className="book-top">
                                 <div className="book-cover" 
@@ -92,14 +107,23 @@ render(){
                                 <select 
                                     //defaultValue = 'currentlyReading'
                                     //{this.state.options[0]} 
+                                    //onChange = {move(book)}
+                                   //onChange = {(e)=> {this.handleChange(e,book); move(e.target.value)}}
                                     onChange = {(e)=> {
-                                      this.combinefun(e,book);
-                                     //this.handleChange(e, book); 
-                                     //this.updatestateofbook(e);
-                                        }}>
+                                      this.combinefun(e, book)
+                                      //BooksAPI.update(book,shelf)
+                                    }
+                                  }
+                                    // onChange = {(e)=> {
+                                    //   //this.redirectHome();
+                                    //   //this.combinefun(e,book);
+                                    //  this.handleChange(e, book); 
+                                    //  //this.updatestateofbook(e);
+                                    //     }}
+                                        >
 
                                         {/* this will loop through the options[] to display them*/}
-                                      {options.map((option)=> (
+                                      {this.state.options.map((option)=> (
                                         <option key = {option} value ={option}>{option}</option>
                                       ))}
                               </select>
@@ -121,4 +145,4 @@ render(){
     )
 }
 }
-export default ListBooksManualCurrentlyReading;
+export default withRouter(ListBooksManualCurrentlyReading);

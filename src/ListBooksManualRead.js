@@ -1,23 +1,31 @@
 import React from 'react';
-import { Multiselect } from 'multiselect-react-dropdown';
+//import { Multiselect } from 'multiselect-react-dropdown';
 //import MultiSelect from "react-multi-select-component";
 import {Link } from 'react-router-dom';
 import * as BooksAPI from './BooksAPI';
 
 class ListBooksManualRead extends React.Component {
 
-  changeToCurrentlyReading = (e) => {
-    //e.preventDefault()
-    return this.props.books.shelf === 'currentlyReading'
-      }
+  state = {
+    options:[
+      'currentlyReading',
+      'wantToRead',
+      'read' ]
+  }
 
-      displayWhatWasSelected = function (value){
-        console.log(value);
-    }
+
+  // changeToCurrentlyReading = (e) => {
+  //   //e.preventDefault()
+  //   return this.props.books.shelf === 'currentlyReading'
+  //     }
+
+  //     displayWhatWasSelected = function (value){
+  //       console.log(value);
+  //   }
     
-    state = {
-      shelf: 'read'
-    }
+    // state = {
+    //   shelf: 'read'
+    // }
     
     
   handleChange = (e, book)  => {
@@ -26,18 +34,18 @@ class ListBooksManualRead extends React.Component {
     BooksAPI.update(book,shelf)  
 }
 
+
  render(){
 
-  // const bookshelf = this.state.books.shelf;
-  //     console.log(bookshelf)
 
     //console.log('prop', this.props)
-    this.state = {
-      options:[
-        'currentlyReading',
-        'wantToRead',
-        'read' ]
-    }
+
+    
+
+    //destructuring 
+
+    const {books} = this.props
+
     // const shelf = this.e.target.value
     return(
             <div className="bookshelf">
@@ -45,7 +53,7 @@ class ListBooksManualRead extends React.Component {
                 <div className="bookshelf-books">
                   <ol className="books-grid">
                     {/* This is going to filter through the books[] to return only the books in the "read" shelf and map through the new array */}
-                    {this.props.books.filter((book) => 
+                    {books.filter((book) => 
                     book.shelf === 'read'
                     ).map((book)=> ( 
                     <li key ={book.title}>
@@ -64,6 +72,7 @@ class ListBooksManualRead extends React.Component {
 
                             <select 
                             defaultValue = {this.state.options[2]} 
+                            
                             onChange=  {(e)=> this.handleChange(e, book)}>
 
                                 {/* this will loop through the options[] to display them*/}
