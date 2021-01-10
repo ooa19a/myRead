@@ -54,12 +54,12 @@ class ListBooks extends React.Component {
                             }}
                           >
                             {/* this will loop through the options[] to display them*/}
-                            {this.state.options.map((option) => (
+                            {options.map((option) => (
                               <option
                                 key={option.value}
                                 value={option.value}
                                 hidden={
-                                  this.state.options[0].value === option.value
+                                  options[0].value === option.value
                                 }
                               >
                                 {option.label}
@@ -105,12 +105,12 @@ class ListBooks extends React.Component {
                               }}
                             >
                               {/* this will loop through the options[] to display them*/}
-                              {this.state.options.map((option) => (
+                              {options.map((option) => (
                                 <option
                                   key={option.value}
                                   value={option.value}
                                   hidden={
-                                    this.state.options[2].value === option.value
+                                    options[2].value === option.value
                                   }
                                 >
                                   {option.label}
@@ -158,12 +158,12 @@ class ListBooks extends React.Component {
                               }}
                             >
                               {/* this will loop through the options[] to display them*/}
-                              {this.state.options.map((option) => (
+                              {options.map((option) => (
                                 <option
                                   key={option.value}
                                   value={option.value}
                                   hidden={
-                                    this.state.options[1].value === option.value
+                                    options[1].value === option.value
                                   }
                                 >
                                   {option.label}
