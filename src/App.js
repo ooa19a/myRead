@@ -3,9 +3,6 @@ import * as BooksAPI from "./BooksAPI";
 import "./App.css";
 import { Route, withRouter } from "react-router-dom";
 import SearchBooks from "./SearchBooks";
-import ListBooksManualCurrentlyReading from "./ListBooksManualCurrentlyReading";
-import ListBooksManualwantToRead from "./ListBooksManualwantToRead";
-import ListBooksManualRead from "./ListBooksManualRead";
 import ListBooks from "./ListBooks";
 
 class BooksApp extends React.Component {
