@@ -12,15 +12,15 @@ persist information as I interact with the application.
 
 | **Screenshots**  | **Screenshots Contd**|
 |------------|------------|
-| [![Homepage](asset/homepage.png)](asset/homepage.png) _**Homepage**_ | ![Homepage](asset/homepage2.png) _**Homepage**_ |
+| [![Homepage](asset/homepage.png)](asset/homepage.png) _**Homepage**_ | [![Homepage(asset/homepage2.png)]](asset/homepage2.png) _**Homepage**_ |
 
 -------------------------------------------------------------------------------------------------
 
-| [![movingAbook]](asset/movingAbook.png) _**Moving a book from a category**_| ![movedAbook](asset/movedAbook.png) _**Successfully Moved the book**_ |
+| [![movingAbook](asset/movingAbook.png)](asset/movingAbook.png) _**Moving a book from a category**_| [![movedAbook](asset/movedAbook.png)](asset/movedAbook.png) _**Successfully Moved the book**_ |
 
-| ![searchBooks](asset/searchBooks.png) _**Search for a book**_ | ![movingFromSearch](asset/movingFromSearch.png) _**Moving a book from the search to a category**_ |
+| [![searchBooks](asset/searchBooks.png)](asset/searchBooks.png) _**Search for a book**_ | [![movingFromSearch](asset/movingFromSearch.png)](asset/movingFromSearch.png) _**Moving a book from the search to a category**_ |
 
-| ![searchbookmoved](asset/searchbookmoved.png) _**Book successfully moed to a category**_ | ![homepage](asset/homepage.png) _**Displaying homepage**_|
+| [![searchbookmoved](asset/searchbookmoved.png)](asset/searchbookmoved.png) _**Book successfully moed to a category**_ | [![homepage](asset/homepage.png)](asset/homepage.png) _**Displaying homepage**_|
 
 ### To get started developing right away:
 
