@@ -57,9 +57,8 @@ class ListBooks extends React.Component {
                               <option
                                 key={option.value}
                                 value={option.value}
-                                hidden={
-                                  options[0].value === option.value
-                                }
+                                hidden=
+                                {options[0].value === option.value}
                               >
                                 {option.label}
                               </option>
@@ -68,6 +67,8 @@ class ListBooks extends React.Component {
                         </div>
                       </div>
                     </div>
+                    <div className="book-title">{book.title}</div>
+                        <div className="book-authors">{book.authors}</div>
                   </li>
                 ))}
               </ol>

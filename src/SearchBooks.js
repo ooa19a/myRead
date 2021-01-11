@@ -10,7 +10,6 @@ class SearchBooks extends Component {
 
   handleSearch = async (e) => {
     const searchValue = e.target.value;
-
     if (searchValue !== "") {
       const showBooks = await BooksAPI.search(e.target.value);
       this.setState({ books: showBooks });
