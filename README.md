@@ -16,7 +16,7 @@ persist information as I interact with the application.
 
 -------------------------------------------------------------------------------------------------
 
-| [![movingAbook](asset/movingAbook.png)] _**Moving a book from a category**_| ![movedAbook](asset/movedAbook.png) _**Successfully Moved the book**_ |
+| [![movingAbook]](asset/movingAbook.png) _**Moving a book from a category**_| ![movedAbook](asset/movedAbook.png) _**Successfully Moved the book**_ |
 
 | ![searchBooks](asset/searchBooks.png) _**Search for a book**_ | ![movingFromSearch](asset/movingFromSearch.png) _**Moving a book from the search to a category**_ |
 
