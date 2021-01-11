@@ -1,7 +1,12 @@
 # Project Overview
 
 ```js
-In the MyReads project, I created a bookshelf app that allows user to select and categorize books you have read, are currently reading, or want to read. The project emphasizes using React to build the application and provides an API server and client library that I used to persist information as you interact with the application.
+In the MyReads project, I created a bookshelf app that allows user to select and categorize books you have read, are currently reading, or want to read. 
+```
+
+```js
+The project emphasizes using React to build the application and provides an API server and client library that I used to 
+persist information as I interact with the application.
 ```
 
 ## Short Video Demostration of the Application
@@ -10,15 +15,15 @@ In the MyReads project, I created a bookshelf app that allows user to select and
 
 | **Screenshots**  | **Screenshots Contd**|
 |------------|------------|
-| ![Homepage](asset/homepage.png) _Homepage_ | ![Homepage](asset/homepage2.png) _Homepage_ |
+| ![Homepage](asset/homepage.png) _**Homepage**_ | ![Homepage](asset/homepage2.png) _**Homepage**_ |
 
 -------------------------------------------------------------------------------------------------
 
-| ![movingAbook](asset/movingAbook.png) _Moving a book from a category_| ![movedAbook](asset/movedAbook.png) _Successfully Moved the book_ |
+| ![movingAbook](asset/movingAbook.png) _**Moving a book from a category**_| ![movedAbook](asset/movedAbook.png) _**Successfully Moved the book**_ |
 
-| ![searchBooks](asset/searchBooks.png) _Search for a book_ | ![movingFromSearch](asset/movingFromSearch.png) _Moving a book from the search to a category_ |
+| ![searchBooks](asset/searchBooks.png) _**Search for a book**_ | ![movingFromSearch](asset/movingFromSearch.png) _**Moving a book from the search to a category**_ |
 
-| ![searchbookmoved](asset/searchbookmoved.png) _Book successfully moed to a category_ | ![homepage](asset/homepage.png) _Displaying homepage_|
+| ![searchbookmoved](asset/searchbookmoved.png) _**Book successfully moed to a category**_ | ![homepage](asset/homepage.png) _**Displaying homepage**_|
 
 ### To get started developing right away:
 
