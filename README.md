@@ -8,7 +8,7 @@ persist information as I interact with the application.
 
 ## Short Video Demostration of the Application
 
-[homepage](asset/video_demostration.gif)
+![homepage](asset/video_demostration.gif)
 
 | **Screenshots**  | **Screenshots Contd**|
 |------------|------------|
