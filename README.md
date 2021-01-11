@@ -8,11 +8,11 @@ persist information as I interact with the application.
 
 ## Short Video Demostration of the Application
 
-![homepage](asset/video_demostration.mp4)
+![homepage](asset/video_demostration.gif)
 
 | **Screenshots**  | **Screenshots Contd**|
 |------------|------------|
-| [![Homepage](asset/homepage.png)](asset/homepage.png) _**Homepage**_ | [![Homepage(asset/homepage2.png)]](asset/homepage2.png) _**Homepage**_ |
+| [![Homepage](asset/homepage.png)](asset/homepage.png) _**Homepage**_ | [![Homepage](asset/homepage2.png)](asset/homepage2.png) _**Homepage**_ |
 
 -------------------------------------------------------------------------------------------------
 
