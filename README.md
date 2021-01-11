@@ -10,7 +10,7 @@ In the MyReads project, I created a bookshelf app that allows user to select and
 
 | ![searchBooks](asset/searchBooks.png) _Search for a book_ | ![movingFromSearch](asset/movingFromSearch.png) _Moving a book from the search to a category_ |
 
-| ![searchbookmoved](asset/saerchbookmoved.png) _Book successfully moed to a category_ | ![homepage](asset/homepage.png) _Displaying homepage_ |
+| ![searchbookmoved](asset/searchbookmoved.png) _Book successfully moed to a category_ | ![homepage](asset/homepage.png) _Displaying homepage_ |
 
 
 
