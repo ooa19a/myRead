@@ -25,163 +25,165 @@ class ListBooks extends React.Component {
     ];
 
     return (
-      <div className="list-books-content">
-        <div>
-          <div className="bookshelf">
-            <h2 className="bookshelf-title">Currently Reading</h2>
-            <div className="bookshelf-books">
-              <ol className="books-grid">
-                {currentlyReading.map((book) => (
-                  <li key={book.id}>
-                    <div className="book">
-                      <div className="book-top">
-                        <div
-                          className="book-cover"
-                          style={{
-                            width: 128,
-                            height: 193,
-                            backgroundImage: `url(${
-                              book.imageLinks.thumbnail
-                            })`,
-                          }}
-                        />
-                        <div className="book-shelf-changer">
-                          <select
-                            defaultValue="wantToRead"
-                            onChange={(e) => {
-                              move(e, book);
+      <div className="list-books">
+        <div className="list-books-title">
+          <h1>MyReads</h1>
+        </div>
+        <div className="list-books-content">
+          <div>
+            <div className="bookshelf">
+              <h2 className="bookshelf-title">Currently Reading</h2>
+              <div className="bookshelf-books">
+                <ol className="books-grid">
+                  {currentlyReading.map((book) => (
+                    <li key={book.id}>
+                      <div className="book">
+                        <div className="book-top">
+                          <div
+                            className="book-cover"
+                            style={{
+                              width: 128,
+                              height: 193,
+                              backgroundImage: `url(${
+                                book.imageLinks.thumbnail
+                              })`,
                             }}
-                          >
-                            {/* this will loop through the options[] to display them*/}
-                            {options.map((option) => (
-                              <option
-                                key={option.value}
-                                value={option.value}
-                                hidden=
-                                {options[0].value === option.value}
+                          />
+                          <div className="book-shelf-changer">
+                            <select
+                              defaultValue={options[0].value}
+                              onChange={(e) => {
+                                move(e, book);
+                              }}
+                            >
+                              {/* this will loop through the options[] to display them*/}
+                              {options.map((option) => (
+                                <option
+                                  key={option.value}
+                                  value={option.value}
+                                  hidden={options[0].value === option.value}
+                                >
+                                  {option.label}
+                                </option>
+                              ))}
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="book-title">{book.title}</div>
+                      <div className="book-authors">{book.authors}</div>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+
+            {/* ################################################# */}
+
+            <div className="bookshelf">
+              <h2 className="bookshelf-title">Want to Read</h2>
+              <div className="bookshelf-books">
+                <ol className="books-grid">
+                  {books
+                    .filter((book) => book.shelf === "wantToRead")
+                    .map((book) => (
+                      <li key={book.id}>
+                        <div className="book">
+                          <div className="book-top">
+                            <div
+                              className="book-cover"
+                              style={{
+                                width: 128,
+                                height: 193,
+                                backgroundImage: `url(${
+                                  book.imageLinks.thumbnail
+                                })`,
+                              }}
+                            />
+                            <div className="book-shelf-changer">
+                              <select
+                                defaultValue="wantToRead"
+                                onChange={(e) => {
+                                  move(e, book);
+                                }}
                               >
-                                {option.label}
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="book-title">{book.title}</div>
-                        <div className="book-authors">{book.authors}</div>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </div>
-
-          {/* ################################################# */}
-
-          <div className="bookshelf">
-            <h2 className="bookshelf-title">Want to Read Vibes</h2>
-            <div className="bookshelf-books">
-              <ol className="books-grid">
-                {books
-                  .filter((book) => book.shelf === "wantToRead")
-                  .map((book) => (
-                    <li key={book.id}>
-                      <div className="book">
-                        <div className="book-top">
-                          <div
-                            className="book-cover"
-                            style={{
-                              width: 128,
-                              height: 193,
-                              backgroundImage: `url(${
-                                book.imageLinks.thumbnail
-                              })`,
-                            }}
-                          />
-                          <div className="book-shelf-changer">
-                            <select
-                              defaultValue="wantToRead"
-                              onChange={(e) => {
-                                move(e, book);
-                              }}
-                            >
-                              {/* this will loop through the options[] to display them*/}
-                              {options.map((option) => (
-                                <option
-                                  key={option.value}
-                                  value={option.value}
-                                  hidden={
-                                    options[2].value === option.value
-                                  }
-                                >
-                                  {option.label}
-                                </option>
-                              ))}
-                            </select>
+                                {/* this will loop through the options[] to display them*/}
+                                {options.map((option) => (
+                                  <option
+                                    key={option.value}
+                                    value={option.value}
+                                    hidden={options[2].value === option.value}
+                                  >
+                                    {option.label}
+                                  </option>
+                                ))}
+                              </select>
+                            </div>
                           </div>
+                          <div className="book-title">{book.title}</div>
+                          <div className="book-authors">{book.authors}</div>
                         </div>
-                        <div className="book-title">{book.title}</div>
-                        <div className="book-authors">{book.authors}</div>
-                      </div>
-                    </li>
-                  ))}
-              </ol>
+                      </li>
+                    ))}
+                </ol>
+              </div>
             </div>
-          </div>
 
-          {/* ############################################### */}
+            {/* ############################################### */}
 
-          <div className="bookshelf">
-            <h2 className="bookshelf-title">Read</h2>
-            <div className="bookshelf-books">
-              <ol className="books-grid">
-                {books
-                  .filter((book) => book.shelf === "read")
-                  .map((book) => (
-                    <li key={book.id}>
-                      <div className="book">
-                        <div className="book-top">
-                          <div
-                            className="book-cover"
-                            style={{
-                              width: 128,
-                              height: 193,
-                              backgroundImage: `url(${
-                                book.imageLinks.thumbnail
-                              })`,
-                            }}
-                          />
-                          <div className="book-shelf-changer">
-                            <select
-                              defaultValue="read"
-                              onChange={(e) => {
-                                move(e, book);
+            <div className="bookshelf">
+              <h2 className="bookshelf-title">Read</h2>
+              <div className="bookshelf-books">
+                <ol className="books-grid">
+                  {books
+                    .filter((book) => book.shelf === "read")
+                    .map((book) => (
+                      <li key={book.id}>
+                        <div className="book">
+                          <div className="book-top">
+                            <div
+                              className="book-cover"
+                              style={{
+                                width: 128,
+                                height: 193,
+                                backgroundImage: `url(${
+                                  book.imageLinks.thumbnail
+                                })`,
                               }}
-                            >
-                              {/* this will loop through the options[] to display them*/}
-                              {options.map((option) => (
-                                <option
-                                  key={option.value}
-                                  value={option.value}
-                                  hidden={
-                                    options[1].value === option.value
-                                  }
-                                >
-                                  {option.label}
-                                </option>
-                              ))}
-                            </select>
+                            />
+                            <div className="book-shelf-changer">
+                              <select
+                                defaultValue="read"
+                                onChange={(e) => {
+                                  move(e, book);
+                                }}
+                              >
+                                {/* this will loop through the options[] to display them*/}
+                                {options.map((option) => (
+                                  <option
+                                    key={option.value}
+                                    value={option.value}
+                                    hidden={options[1].value === option.value}
+                                  >
+                                    {option.label}
+                                  </option>
+                                ))}
+                              </select>
+                            </div>
                           </div>
+                          <div className="book-title">{book.title}</div>
+                          <div className="book-authors">{book.authors}</div>
                         </div>
-                        <div className="book-title">{book.title}</div>
-                        <div className="book-authors">{book.authors}</div>
-                      </div>
-                    </li>
-                  ))}
-              </ol>
+                      </li>
+                    ))}
+                </ol>
+              </div>
             </div>
-          </div>
-          <div className="open-search">
-            <button onClick={() => history.push("/search")}>Add a book</button>
+            <div className="open-search">
+              <button onClick={() => history.push("/search")}>
+                Add a book
+              </button>
+            </div>
           </div>
         </div>
       </div>
