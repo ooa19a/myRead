@@ -1,25 +1,29 @@
 # Project Overview
-In the MyReads project, I created a bookshelf app that allows user to select and categorize books you have read, are currently reading, or want to read. The project emphasizes using React to build the application and provides an API server and client library that I used to persist information as you interact with the application.
 
+```js
+In the MyReads project, I created a bookshelf app that allows user to select and categorize books you have read, are currently reading, or want to read. The project emphasizes using React to build the application and provides an API server and client library that I used to persist information as you interact with the application.
+```
+
+## Short Video Demostration of the Application
+
+![homepage](asset/homepage.png)
 
 | **Screenshots**  | **Screenshots Contd**|
 |------------|------------|
 | ![Homepage](asset/homepage.png) _Homepage_ | ![Homepage](asset/homepage2.png) _Homepage_ |
 
+-------------------------------------------------------------------------------------------------
+
 | ![movingAbook](asset/movingAbook.png) _Moving a book from a category_| ![movedAbook](asset/movedAbook.png) _Successfully Moved the book_ |
 
 | ![searchBooks](asset/searchBooks.png) _Search for a book_ | ![movingFromSearch](asset/movingFromSearch.png) _Moving a book from the search to a category_ |
 
-| ![searchbookmoved](asset/searchbookmoved.png) _Book successfully moed to a category_ | ![homepage](asset/homepage.png) _Displaying homepage_ |
+| ![searchbookmoved](asset/searchbookmoved.png) _Book successfully moed to a category_ | ![homepage](asset/homepage.png) _Displaying homepage_|
 
+### To get started developing right away:
 
-
-
-
-To get started developing right away:
-
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
+* I installed all project dependencies with `npm install`
+* I started the development server with `npm start`
 
 ## What is included in the project file
 ```bash
