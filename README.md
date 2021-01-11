@@ -9,6 +9,7 @@ persist information as I interact with the application.
 ## Short Video Demostration of the Application
 
 [![homepage](https://media.giphy.com/media/PRk9ZsoXBjPCEcdy3n/giphy.gif)](asset/video_demostration.mp4)
+_Click on the gif to see the full (1 minute) video_
 
 | **Screenshots**  | **Screenshots Contd**|
 |------------|------------|
