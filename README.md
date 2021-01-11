@@ -1,4 +1,15 @@
-# MyReads Project
+# Project Overview
+In the MyReads project, I created a bookshelf app that allows user to select and categorize books you have read, are currently reading, or want to read. The project emphasizes using React to build the application and provides an API server and client library that I used to persist information as you interact with the application.
+
+
+
+
+
+
+
+
+
+## MyReads Project
 
 This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
 
