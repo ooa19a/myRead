@@ -8,7 +8,7 @@ persist information as I interact with the application.
 
 ## Short Video Demostration of the Application
 
-![homepage](https://bitbucket.org/ooa19a/book_library_application/src/master/asset/video_demostration.gif)
+![homepage](https://media.giphy.com/media/PRk9ZsoXBjPCEcdy3n/giphy.gif)
 
 | **Screenshots**  | **Screenshots Contd**|
 |------------|------------|
