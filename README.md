@@ -2,16 +2,13 @@
 
 ```js
 In the MyReads project, I created a bookshelf app that allows user to select and categorize books you have read, are currently reading, or want to read. 
-```
-
-```js
 The project emphasizes using React to build the application and provides an API server and client library that I used to 
 persist information as I interact with the application.
 ```
 
 ## Short Video Demostration of the Application
 
-![homepage](asset/homepage.png)
+![homepage](asset/video_demostration.mp4)
 
 | **Screenshots**  | **Screenshots Contd**|
 |------------|------------|
@@ -19,7 +16,7 @@ persist information as I interact with the application.
 
 -------------------------------------------------------------------------------------------------
 
-| ![movingAbook](asset/movingAbook.png) _**Moving a book from a category**_| ![movedAbook](asset/movedAbook.png) _**Successfully Moved the book**_ |
+| [![movingAbook](asset/movingAbook.png)] _**Moving a book from a category**_| ![movedAbook](asset/movedAbook.png) _**Successfully Moved the book**_ |
 
 | ![searchBooks](asset/searchBooks.png) _**Search for a book**_ | ![movingFromSearch](asset/movingFromSearch.png) _**Moving a book from the search to a category**_ |
 
