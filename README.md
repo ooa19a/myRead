@@ -1,6 +1,6 @@
 # Project Overview
 
-I completed this project without using Redux. 
+I completed this project without using Redux.  
 
 ```js
 In the MyReads project, I created a bookshelf app that allows user to select and categorize books you have read, are currently reading, or want to read. 
