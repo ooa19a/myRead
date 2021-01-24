@@ -3,7 +3,8 @@
 I completed this project without using Redux.  
 
 ```js
-In the MyReads project, I created a bookshelf app that allows user to select and categorize books you have read, are currently reading, or want to read. 
+In the MyReads project, I created a bookshelf app that allows user to select and categorize books you have read, 
+are currently reading, or want to read. 
 The project emphasizes using React to build the application and provides an API server and client library that I used to 
 persist information as I interact with the application.
 ```
@@ -19,7 +20,7 @@ _Click on the gif to see the full (1 minute) video_
 
 -------------------------------------------------------------------------------------------------
 
-| [![movingAbook](asset/movingAbook.png)](asset/movingAbook.png) _**Moving a book from a category**_| [![movedAbook](asset/movedAbook.png)](asset/movedAbook.png) _**Successfully Moved the book**_ |
+| [![movingAbook](asset/movingAbook.png)](asset/movingAbook.png) _**Moving a book from a category**_ | [![movedAbook](asset/movedAbook.png)](asset/movedAbook.png) _**Successfully Moved the book**_ |
 
 | [![searchBooks](asset/searchBooks.png)](asset/searchBooks.png) _**Search for a book**_ | [![movingFromSearch](asset/movingFromSearch.png)](asset/movingFromSearch.png) _**Moving a book from the search to a category**_ |
 
